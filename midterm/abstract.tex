@@ -1,0 +1,86 @@
+%
+% 総合研究概要書原稿サンプルファイル
+%
+% ・題名,  研究室名, 学籍番号, 氏名, 指導教員名 は1段組,
+%   本文は2段組．全体で1ページ。ページ番号は不要。
+% ・カラー使用可だが，PDF化したときにファイルサイズが最大 5MB 程度に収まるようにすること。
+% ・余白, フォントサイズなどは多少変えてもよいが, あまり大幅に
+%   変更しないように．他の人の概要とのバランスも考えて.
+%
+\documentclass[twocolumn]{jarticle}
+\usepackage{amsmath,amsfonts,amssymb}
+\usepackage{color}
+\usepackage[dvipdfm]{graphicx}
+\usepackage{booktabs}
+
+\pagestyle{empty}
+\setlength\textheight{255mm}
+\setlength\textwidth{170mm}
+\setlength\topmargin{-5mm}
+\setlength\oddsidemargin{-5mm}
+\setlength\headheight{0mm}
+\setlength\headsep{0mm}
+\setlength\columnsep{8mm}
+%**************************
+\title{
+  \LARGE\bf
+  ReactCOPの検証 \\[1ex]}
+\author{ソフトウェア工学研究室 \quad
+        BV20036 大野 弘貴 \quad
+        指導教員 久住 憲嗣 教授}
+\date{}
+%**************************
+\begin{document}
+\maketitle
+\thispagestyle{empty}
+
+\section{はじめに}
+
+コンテキスト指向プログラミングは、プログラムの振る舞いを実行時の文脈や状況に応じて動的に変化させるアプローチである。
+この手法は、特に複雑なソフトウェアシステムにおいて、異なる要求や条件に柔軟に応じる必要がある場合に特に有用である。
+
+ReactCOPは、人気のあるJavaScriptライブラリであるReactをベースにしたコンテキスト指向プログラミングのライブラリである。
+ReactCOPは、Reactコンポーネントの振る舞いをコンテキストの変化に応じて自動的に切り替えることが可能であります。
+
+本研究では、ReactCOPの多層および合成層の概念について検証を行う。
+多層とは、複数のコンテキストが階層的に組み合わさることを指し、複合層とは、異なる層が組み合わさってできる層のことを指す。
+これらの概念がReactCOPで実現可能であるかどうかを明らかにすることで、より複雑な振る舞いの実現や柔軟なコンポーネント設計が可能かどうかを評価する。
+
+\section{関連研究}
+\subsection{ReactCOP}
+パラメータ値処理に関する問題があり、この問題はフロントエンドWebアプリケーションでは更に複雑になる。
+この問題に対する解決策として、ReactCOPが提案され、2つのケーススタディが紹介された。
+ReactCOPは、レイヤーパラメータ管理によってコンポーネント内レイヤーモデルのパラメータ問題を解決することを目的とする。
+
+\subsection{EventCJに複合層を導入}
+紙名らは、イベント駆動型のCOP言語であるEventCJに複合層を導入した。
+レイヤーのアクティベーションコードがシンプルで、複雑なコンテキスト関連の問題がないことを示している。
+EventCJ でのこのメカニズムの効率的な実装についても説明している。
+
+\subsection{ContextLの多層}
+ContextLはコンテキスト指向プログラミングを可能にする Common Lisp オブジェクトシステムの拡張機能である。
+ContextLは、多層を可能にしている。
+
+
+\section{提案手法}
+本研究では、ReactCOPの多層および複合層について検証を行う。
+検証方法としては、ReactCOPの多層および合成層の概念を実装し、実際に動作するかどうかを確認する。
+検証結果によっては、新たな機能を追加することで、多層および合成層を実現する。
+
+\section{まとめ}
+ReactCOPの多層および合成層の概念等について検証を行う。
+検証結果によっては、新たな機能を追加することで、多層および合成層を実現する。
+
+\begin{thebibliography}{1}
+\bibitem{Abe92}
+Hiroki Hashimoto, IReactCOP Supporting Layer Parameter Management for Front-end Web Applications, .
+\bibitem{kamina}
+Tetsuo Kamina, Tomoyuki Aotani, Hidehiko Masuhara, Introducing Composite Layers in EventC, IPSJ Transactions on Programming Vol.6,No.1 1–8, 2013.
+\bibitem{Kawasaki}
+Costanza, P., Hirschfeld, R.: Language constructs for context-oriented programming: An overview of ContextL. In: Proceedings of the Dynamic Languages Symposium (DLS) ’05, co-organized with OOPSLA’05, New York, NY, USA, ACM
+Press (2005)
+\bibitem{Kawasaki2}
+紙名哲生, 文脈指向プログラミングの要素技術と展望, コンピュータ・ソフトウェア, Vol.31, No. 1, pp. 3-13. (2014)
+\end{thebibliography}
+\end{document}
+
