@@ -12,6 +12,8 @@
 \usepackage{color}
 \usepackage[dvipdfm]{graphicx}
 \usepackage{booktabs}
+\usepackage{setspace}
+\setstretch{0.95} % ページ全体の行間を設定
 
 \pagestyle{empty}
 \setlength\textheight{255mm}
@@ -24,7 +26,7 @@
 %**************************
 \title{
   \LARGE\bf
-  ReactCOPの検証 \\[1ex]}
+  ReactCOPの評価と改良 \\[1ex]}
 \author{ソフトウェア工学研究室 \quad
         BV20036 大野 弘貴 \quad
         指導教員 久住 憲嗣 教授}
@@ -40,47 +42,52 @@
 この手法は、特に複雑なソフトウェアシステムにおいて、異なる要求や条件に柔軟に応じる必要がある場合に特に有用である。
 
 ReactCOPは、人気のあるJavaScriptライブラリであるReactをベースにしたコンテキスト指向プログラミングのライブラリである。
-ReactCOPは、Reactコンポーネントの振る舞いをコンテキストの変化に応じて自動的に切り替えることが可能であります。
-
-本研究では、ReactCOPの多層および合成層の概念について検証を行う。
-多層とは、複数のコンテキストが階層的に組み合わさることを指し、複合層とは、異なる層が組み合わさってできる層のことを指す。
+ReactCOPは、Reactコンポーネントの振る舞いをコンテキストの変化に応じて自動的に切り替えることが可能である。
+多層とは、複数の層が階層的に組み合わさることを指し、複合層とは、異なる層が組み合わさってできる層のことを指す。
+本研究では、ReactCOPの多層および複合層、非同期処理について評価し、改良を行う。
 これらの概念がReactCOPで実現可能であるかどうかを明らかにすることで、より複雑な振る舞いの実現や柔軟なコンポーネント設計が可能かどうかを評価する。
 
 \section{関連研究}
-\subsection{ReactCOP}
-パラメータ値処理に関する問題があり、この問題はフロントエンドWebアプリケーションでは更に複雑になる。
-この問題に対する解決策として、ReactCOPが提案され、2つのケーススタディが紹介された。
-ReactCOPは、レイヤーパラメータ管理によってコンポーネント内レイヤーモデルのパラメータ問題を解決することを目的とする。
+\paragraph{ReactCOP}
+ReactはフロントエンドWebアプリケーションの開発において人気のあるJavaScriptライブラリである。
+Reactでコンテキストプログラミングを行う場合、 レイヤー間でパラメータの値を扱う際におこるレイヤーパラメータ問題というものがある。
+橋本らは、この問題を解決するために、ReactCOPというReactをベースにしたコンテキスト指向プログラミングのライブラリを提案した。
+これによって、レイヤーパラメータ問題を解決し、2つのケーススタディによって有用性を示した。
+しかし、橋本らのケーススタディでは複合層や多層、非同期処理については扱われていない。
+本研究では、ReactCOPの多層および複合層、非同期処理について評価し、改良を行う。
 
-\subsection{EventCJに複合層を導入}
+\paragraph{EventCJに複合層を導入}
 紙名らは、イベント駆動型のCOP言語であるEventCJに複合層を導入した。
-レイヤーのアクティベーションコードがシンプルで、複雑なコンテキスト関連の問題がないことを示している。
-EventCJ でのこのメカニズムの効率的な実装についても説明している。
-
-\subsection{ContextLの多層}
-ContextLはコンテキスト指向プログラミングを可能にする Common Lisp オブジェクトシステムの拡張機能である。
-ContextLは、多層を可能にしている。
-
+ReactCOPには複合層を扱うシステムが存在しないため、EventCJと同様に複合層を導入することでReactCOPの複合層を実現する。
+複合層のシステムが存在すると、複雑な振る舞いをより簡単に実現できるようになる。
+本研究では、EventCJの複合層と同様に導入することでReactCOPの複合層を実現する。
 
 \section{提案手法}
-本研究では、ReactCOPの多層および複合層について検証を行う。
+本研究では、ReactCOPの多層および複合層、非同期処理について検証を行う。
 検証方法としては、ReactCOPの多層および合成層の概念を実装し、実際に動作するかどうかを確認する。
-検証結果によっては、新たな機能を追加することで、多層および合成層を実現する。
+検証結果によっては、新たな機能を追加することで多層、合成層および非同期処理を実現する。
+
+ReactCOPは層の中に非同期処理が存在することを想定していない。
+例えば、非同期処理が発生した後に層の切り替えが行われた場合、層の切り替え後に非同期処理が動作することが考えられる。
+これは非活性化した層が動作しているという意味で意図しないことである。
+
+ReactCOPは複合層、多層を表現するシステムが存在しない。
+故に複合層、多層を表現しようとすると複雑なコードになることが予想される。
+この問題を解決するために紙名らの論文\cite{composite_layer}を参考に複合層を実現する。
+複合層と多層は他の層に依存しているという点において同じである。
+そのため、複合層のシステムを実現した時点で多層についてもある程度解決されることが考えられる。
+
+
 
 \section{まとめ}
-ReactCOPの多層および合成層の概念等について検証を行う。
-検証結果によっては、新たな機能を追加することで、多層および合成層を実現する。
+ReactCOPの多層、複合層および非同期処理について検証を行う。
+検証結果によっては、新たな機能を追加することで多層、合成層および非同期処理を実現する。
 
 \begin{thebibliography}{1}
-\bibitem{Abe92}
-Hiroki Hashimoto, IReactCOP Supporting Layer Parameter Management for Front-end Web Applications, .
-\bibitem{kamina}
-Tetsuo Kamina, Tomoyuki Aotani, Hidehiko Masuhara, Introducing Composite Layers in EventC, IPSJ Transactions on Programming Vol.6,No.1 1–8, 2013.
-\bibitem{Kawasaki}
-Costanza, P., Hirschfeld, R.: Language constructs for context-oriented programming: An overview of ContextL. In: Proceedings of the Dynamic Languages Symposium (DLS) ’05, co-organized with OOPSLA’05, New York, NY, USA, ACM
-Press (2005)
-\bibitem{Kawasaki2}
-紙名哲生, 文脈指向プログラミングの要素技術と展望, コンピュータ・ソフトウェア, Vol.31, No. 1, pp. 3-13. (2014)
+\bibitem{react_cop}
+Hiroki Hashimoto, ReactCOP Supporting Layer Parameter Management for Front-end Web Applications, .
+\bibitem{composite_layer}
+Tetsuo Kamina, Tomoyuki Aotani, Hidehiko Masuhara, Introducing Composite Layers in EventCJ, IPSJ Transactions on Programming Vol.6,No.1 1–8, 2013.
 \end{thebibliography}
 \end{document}
 
