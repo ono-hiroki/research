@@ -1,0 +1,116 @@
+\documentclass[titlepage, a4paper, 11pt, dvipdfmx]{jsarticle}
+\usepackage{customstyle}
+
+\title{\Huge【レポート\#1】ラグランジュ補間}%タイトル
+\date{\today}%日付
+\author{\Large BV20036 \quad 大野 弘貴}%名前
+
+\begin{document}
+\maketitle
+\pagenumbering{roman}
+% \tableofcontents%目次が消したい場合はコメントアウト
+\newpage
+\pagenumbering{arabic}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%以下サンプル%ここから書き始めてください
+
+%セクション(目次に表示されるのは初期設定では)
+\section{レポート内容}
+\begin{itembox}[l]{囲いのタイトル左版}
+    \begin{itemize}
+        \item 標本点が次の (真の) 関数により与えられる場合を考える\\
+      $$ f(x)=\frac{1}{1+2x^2} $$
+        \item n+1個の標本点($x_0$,$f_0$), ($x_1$,$f_1$), $ \cdots $, ($x_n$,$f_n$)が区間[-5, 5]において等間隔で与えられていたとする
+        \begin{itemize}
+            \item 上記の真値となる関数から自分で(自動で)標本点を作成する
+        \end{itemize} 
+        \item 区間[-5, 5]を100等分したときの分点101点ラグランジュ補間を計算し、グラフを作成せよ
+        \item n = 5, 8, 11, 14について真値の関数, ラグランジュ補完を計算し, グラフを作成せよ
+        \begin{itemize}
+            \item nは多項式の次数，標本点の数は(n+1)個
+        \end{itemize} 
+  \end{itemize}
+\end{itembox}
+\section{ラグランジュ補間とは}
+ラグランジュ補間とは, n + 1 個の標本点 $(x_0, f_0), (x_1, f_1), \cdots , (x_n, f_n)$ が与えられた際に, それ らすべての点を通る n 次関数の曲線を求めることで, その他の適当な点 $x(x_1 < x < x_n)$ に対応する
+  関数値 f(x) を推定することができる補間法の一つであり, 以下を満たす.
+
+%囲い
+\begin{itembox}[l]{ラグランジュ補完}
+    \begin{itemize}
+        \item 次のn次多項式を考える\\
+      $$ f(x) \coloneqq \frac{(x − x_0)(x − x_1)\cdots(x − x_{j−1})(x − x_{j+1})\cdots(x − x_n)}{(x_j − x_0)(x_j − x1_)\cdots(x_j − x_{j−1})(x_j − x_{j+1})\cdots(x_j − x_n)} $$
+        \item この多項式は変数 $x$ に $x_j$ を代入すると 1 になり, $x_k(j \neg k)$ を代入すると 0 になる
+        \begin{itemize}
+            \item クロネッカーデルタを用いて表すと
+          \begin{equation*}
+             l_j(x_k) = δ_{jk} \left\{ \,
+                \begin{aligned}
+                    & 1　(j = k) \\
+                    & 0　(j \neq k)\\
+                \end{aligned}
+            \right.
+            \end{equation*}
+        \end{itemize} 
+        \item 補間条件を満たす n 次の多項式 (ラグランジュの n 次補間多項式) は次で与えられる
+        \begin{equation*}
+            P_n(x) = f_0l_0(x) + f_1l_1(x) + \dots + f_nl_n(x) = \sum_{j=0}^n f_jl_j(x)
+        \end{equation*}
+  \end{itemize}
+\end{itembox}
+\section{実装したコード}
+
+%プログラム挿入
+\lstinputlisting[caption=Lagrange.m, label=Label_Program]{../../Lagrange/Lagrange.m}%[キャプションやらラベルやら]{ファイルの相対パス}
+\lstinputlisting[caption=Lagrange.m, label=Label_Program]{../../Lagrange/main.m}%[キャプションやらラベルやら]{ファイルの相対パス}
+
+%画像挿入
+\begin{figure}[H]
+  \begin{center}%中央寄せ用
+    \includegraphics[width=13.5cm]{../../Lagrange/n-5.eps}%[大きさ指定]{ファイルの相対パス}
+  \caption{キャプション}
+  \label{Label}%ラベル
+  \end{center}
+\end{figure}
+
+\begin{figure}[H]
+  \begin{center}%中央寄せ用
+    \includegraphics[width=13.5cm]{../../Lagrange/n-8.eps}%[大きさ指定]{ファイルの相対パス}
+  \caption{キャプション}
+  \label{Label}%ラベル
+  \end{center}
+\end{figure}
+
+\begin{figure}[H]
+  \begin{center}%中央寄せ用
+    \includegraphics[width=13.5cm]{../../Lagrange/n-11.eps}%[大きさ指定]{ファイルの相対パス}
+  \caption{キャプション}
+  \label{Label}%ラベル
+  \end{center}
+\end{figure}
+
+\begin{figure}[H]
+  \begin{center}%中央寄せ用
+    \includegraphics[width=13.5cm]{../../Lagrange/n-14.eps}%[大きさ指定]{ファイルの相対パス}
+  \caption{キャプション}
+  \label{Label}%ラベル
+  \end{center}
+\end{figure}
+  %ラベルは\ref{Label}のように書くと数字だけ表示される(2回コンパイルが必要). {括弧}の中身は任意(英語推奨).
+
+\section{考察}
+以上の結果から標本点が偶数、つまりnが奇数のときの方が精度が高いことがわかった。
+また、nの値が大きくなるほど端の値の精度が悪くなる。このことから精度を高くするためには、細かくするつまりnを大きくすればよいという安易な考えが間違っていることがわかった。また、この現象をルンゲ現象と言うらしい。このルンゲ現象を回避するためにはうまいこと間隔をとれば良いらしい。この間隔のとりかたはチェビシェフノードを使えば求まる。\\
+　また、ラグランジュ補間に限らずニュートン補完やスプライン補間では、線形補完などの単純な補間とは違い、高階の差分商が行われている。これによって桁落ちが発生しやすいことを忘れていたがとても大切な特性なことだとわかった。
+%参考資料記載
+\begin{thebibliography}{1}
+%著者, タイトル, 出版社, 現在の版の第1刷が発行された年. など, 詳しくはググる
+\bibitem{kaggle}　福田 亜希子, 数値解析 $\rm(I\hspace{-.01em}I)$【第 3 回】 
+%\bibitem{ラベル名}, \cite{ラベル名}で呼び出せる(2回コンパイルが必要)
+\end{thebibliography}
+
+
+\end{document}

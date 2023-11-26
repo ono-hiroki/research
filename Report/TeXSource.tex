@@ -1,0 +1,145 @@
+\documentclass[titlepage, a4paper, 11pt, dvipdfmx]{jsarticle}
+\usepackage{customstyle}
+
+\title{\Huge レポート用TeX(プログラム挿入可能)}%タイトル
+\date{\today}%日付
+\author{\Large BVXXXXX \quad 数理 太郎}%名前
+
+\begin{document}
+\maketitle
+\pagenumbering{roman}
+\tableofcontents%目次が消したい場合はコメントアウト
+\newpage
+\pagenumbering{arabic}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%以下サンプル%ここから書き始めてください
+
+%セクション(目次に表示されるのは初期設定では)
+\section{セクション}
+\subsection{サブセクション}
+\subsubsection{サブサブセクション}
+
+%囲い
+\begin{itembox}[l]{囲いのタイトル左版}
+複数行の四角の囲い.
+\end{itembox}
+
+\begin{itembox}[c]{囲いのタイトル中央版}
+複数行の四角の囲い. 囲いのタイトル左版
+\end{itembox}
+
+\begin{itembox}[r]{囲いのタイトル右版}
+複数行の四角の囲い.
+\end{itembox}
+
+%改ページ
+\newpage
+
+%箇条書き
+\begin{itemize}
+\item 箇条書き
+\item 箇条書き
+\item 箇条書き
+\end{itemize}
+
+\begin{itemize}
+\item 箇条書き
+\item 箇条書き
+\item 箇条書き
+
+\begin{itemize}
+\item 箇条書きの中にも箇条書きを入れられる
+\item 箇条書きの中にも箇条書きを入れられる
+\item 箇条書きの中にも箇条書きを入れられる
+
+\begin{itemize}
+\item 箇条書きの中にも箇条書きを入れられる
+\item 箇条書きの中にも箇条書きを入れられる
+\item 箇条書きの中にも箇条書きを入れられる
+
+\begin{itemize}
+\item 箇条書きの中にも箇条書きを入れられる
+\item 箇条書きの中にも箇条書きを入れられる
+\item 箇条書きの中にも箇条書きを入れられる
+\end{itemize}
+
+\end{itemize}
+
+\end{itemize}
+
+\end{itemize}
+
+%番号付き箇条書き
+\begin{enumerate}
+\item 数字つき箇条書き
+\item 数字つき箇条書き
+\item 数字つき箇条書き
+\end{enumerate}
+
+\begin{enumerate}
+\item 数字つき箇条書き
+\item 数字つき箇条書き
+\item 数字つき箇条書き
+
+\begin{enumerate}
+\item 数字つき箇条書き
+\item 数字つき箇条書き
+\item 数字つき箇条書き
+
+\begin{enumerate}
+\item 数字つき箇条書き
+\item 数字つき箇条書き
+\item 数字つき箇条書き
+
+\begin{enumerate}
+\item 数字つき箇条書き
+\item 数字つき箇条書き
+\item 数字つき箇条書き
+\end{enumerate}
+
+\end{enumerate}
+
+\end{enumerate}
+
+\end{enumerate}
+
+%見出し付き箇条書き
+\begin{description}
+\item[あいうえお] 見出し付き箇条書き
+\item[かきくけこ] 見出し付き箇条書き
+\item[さしすせそ] 見出し付き箇条書き
+\end{description}
+
+%画像挿入
+\begin{figure}[H]
+\begin{center}%中央寄せ用
+\includegraphics[width=13.5cm]{./graphics/graph.eps}%[大きさ指定]{ファイルの相対パス}
+\caption{キャプション}
+\label{Label}%ラベル
+\end{center}
+\end{figure}
+%ラベルは\ref{Label}のように書くと数字だけ表示される(2回コンパイルが必要). {括弧}の中身は任意(英語推奨).
+
+%プログラム挿入
+\lstinputlisting[caption=キャプション, label=Label_Program]{./program/program.c}%[キャプションやらラベルやら]{ファイルの相対パス}
+
+\begin{lstlisting}[caption=キャプション, label=Label_Program_2]
+#include<stdio.h>
+int main{
+    printf("Hello World!!");
+    return 0;
+}
+\end{lstlisting}
+
+%参考資料記載
+\begin{thebibliography}{1}
+%著者, タイトル, 出版社, 現在の版の第1刷が発行された年. など, 詳しくはググる
+\bibitem{kaggle} 門脇大輔 他, Kaggleで勝つデータ分析の技術 : 2019.10.22
+%\bibitem{ラベル名}, \cite{ラベル名}で呼び出せる(2回コンパイルが必要)
+\end{thebibliography}
+
+
+\end{document}
