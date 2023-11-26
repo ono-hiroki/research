@@ -1,4 +1,4 @@
-f := differential_equation
+f := final
 
 c:
 	platex $(f).tex && dvipdfmx $(f).dvi && open $(f).pdf

@@ -1,0 +1,67 @@
+\documentclass[a4paper]{jarticle}
+%\usepackage{amsmath}
+% サブサブセクションを (1),(2)にする設定
+\renewcommand{\thesubsubsection}{(\arabic{subsubsection})}
+% (i),(ii)なら \arabic を \roman に変える。    (a),(b)なら \alph
+
+% 大問2の3番目の計算式のラベルを (2.3) にする設定
+% 計算式の参照には \eqref{eq:hoge} を使う
+\newcommand{\ifdraft}{false}
+\makeatletter
+\renewcommand{\theequation}{\arabic{subsection}.\arabic{equation}}
+\@addtoreset{equation}{subsection}
+\makeatother
+
+% --------------------------------------------------------------------
+\usepackage{./style/customstyle}
+
+
+\title{\Huge react cop2}%タイトル
+\date{\today}%日付
+\author{\quad hono}%名前
+
+\begin{document}
+    \maketitle
+    \pagenumbering{roman}
+    \newpage
+    \tableofcontents%目次が消したい場合はコメントアウト
+    \newpage
+
+    \pagenumbering{arabic}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%以下サンプル%ここから書き始めてください
+
+%セクション(目次に表示されるのは初期設定では)
+
+\input{components/section/section1}
+
+\subsection{研究背景}
+\subsection{研究目的}
+\subsection{本論文の構成}
+
+\section{関連研究}
+\subsection{関連研究1}
+\subsection{関連研究2}
+
+\section{提案手法}
+\subsection{提案手法1}
+\subsection{提案手法2}
+
+\section{実験}
+\subsection{実験1}
+\subsection{実験2}
+
+\section{考察}
+
+\section{結論}
+
+\section*{謝辞}
+
+\section*{参考文献}
+
+\section*{付録}
+
+\end{document}
