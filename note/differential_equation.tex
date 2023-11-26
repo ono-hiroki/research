@@ -1,0 +1,51 @@
+\documentclass[a4paper]{jarticle}
+%\usepackage{amsmath}
+% サブサブセクションを (1),(2)にする設定
+\renewcommand{\thesubsubsection}{(\arabic{subsubsection})}
+% (i),(ii)なら \arabic を \roman に変える。    (a),(b)なら \alph
+
+% 大問2の3番目の計算式のラベルを (2.3) にする設定
+% 計算式の参照には \eqref{eq:hoge} を使う
+\newcommand{\ifdraft}{false}
+\makeatletter
+\renewcommand{\theequation}{\arabic{subsection}.\arabic{equation}}
+\@addtoreset{equation}{subsection}
+\makeatother
+
+% --------------------------------------------------------------------
+\usepackage{./style/customstyle}
+
+
+\title{\Huge 微分方程式}%タイトル
+\date{\today}%日付
+\author{\quad hono}%名前
+
+\begin{document}
+    \maketitle
+    \pagenumbering{roman}
+    \newpage
+    \tableofcontents%目次が消したい場合はコメントアウト
+    \newpage
+
+    \pagenumbering{arabic}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%以下サンプル%ここから書き始めてください
+
+%セクション(目次に表示されるのは初期設定では)
+
+
+
+
+
+
+
+
+%    \include{components/differential_equation/separation_of_variables}
+
+    \include{components/hoge}
+%    \include{components/hoge2}
+
+\end{document}
