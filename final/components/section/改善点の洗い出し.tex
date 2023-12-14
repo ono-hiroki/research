@@ -1,0 +1,35 @@
+\expandafter\ifx\csname ifdraft\endcsname\relax
+\documentclass{jsarticle}
+\begin{document}
+    \fi
+    \section{改善点の洗い出し}
+    \subsection{試しに作成したアプリ}
+    \subsection{見つかった改善点}
+
+
+%     この章では、ライブラリを使用したことによって発見した改善点について述べる。
+%     \subsection{ライブラリの使用}
+%     何を作ったか、どういうライブラリを使ったか、どういうコードを書いたかを書く。
+%     言うても、いらないかもしれない。
+%
+%     \subsection{改善点の発見}
+%     本研究では、ライブラリを使用したことによって、以下の改善点を発見した。
+%
+% \begin{lstlisting}[caption=hoge,label=fuga]
+% // このとき、FloatとIntegerのレイヤの活性化は排反でよい気がする
+% const [getHoge, setHoge] = useLayerParams('', ["Float", "Integer"]);
+%
+% // いちいち切り替えがめんどう
+% layerManager.deactivateLayer("Integer");
+% layerManager.activateLayer("Float");
+%
+%
+% // 排反ではないから２つ条件含むのどうなん？
+% <Layer condition={layerState.Float && !layerState.Integer}>
+% \end{lstlisting}
+
+
+
+    \expandafter\ifx\csname ifdraft\endcsname\relax
+\end{document}
+\fi
