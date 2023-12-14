@@ -1,0 +1,1244 @@
+This is pdfTeX, Version 3.141592653-2.6-1.40.23 (TeX Live 2022/dev) (preloaded format=pdflatex 2021.8.22)  9 DEC 2023 11:39
+entering extended mode
+ restricted \write18 enabled.
+ file:line:error style messages enabled.
+ %&-line parsing enabled.
+**提案手法.tex
+(./提案手法.tex
+LaTeX2e <2021-06-01> patch level 1
+L3 programming layer <2021-07-12>
+(/usr/local/texlive/2021/texmf-dist/tex/platex/jsclasses/jsarticle.cls
+
+/usr/local/texlive/2021/texmf-dist/tex/platex/jsclasses/jsarticle.cls:14: LaTeX
+ Error: This file needs format `pLaTeX2e'
+               but this is `LaTeX2e'.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.14 \NeedsTeXFormat{pLaTeX2e}
+                              
+The current input file will not be processed further,
+because it was written for some other flavor of TeX.
+You're in trouble here.  Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+) (/usr/local/texlive/2021/texmf-dist/tex/latex/l3backend/l3backend-pdftex.def
+File: l3backend-pdftex.def 2021-08-04 L3 backend support: PDF output (pdfTeX)
+\l__color_backend_stack_int=\count182
+\l__pdf_internal_box=\box50
+)
+No file 提案手法.aux.
+\openout1 = `提案手法.aux'.
+
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 3.
+LaTeX Font Info:    ... okay on input line 3.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 3.
+LaTeX Font Info:    ... okay on input line 3.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 3.
+LaTeX Font Info:    ... okay on input line 3.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 3.
+LaTeX Font Info:    ... okay on input line 3.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 3.
+LaTeX Font Info:    ... okay on input line 3.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 3.
+LaTeX Font Info:    ... okay on input line 3.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 3.
+LaTeX Font Info:    ... okay on input line 3.
+
+./提案手法.tex:3: LaTeX Error: The font size command \normalsize is not def
+ined:
+               there is probably something wrong with the class file.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.3 \begin{document}
+                    
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+./提案手法.tex:5: Undefined control sequence.
+l.5     \section
+                {提案手法}
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+
+./提案手法.tex:5: Package inputenc Error: Unicode character 提 (U+63D0)
+(inputenc)                not set up for use with LaTeX.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.5     \section{提
+                    案手法}
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+./提案手法.tex:5: Package inputenc Error: Unicode character 案 (U+6848)
+(inputenc)                not set up for use with LaTeX.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.5     \section{提案
+                       手法}
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+./提案手法.tex:5: Package inputenc Error: Unicode character 手 (U+624B)
+(inputenc)                not set up for use with LaTeX.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.5     \section{提案手
+                          法}
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+./提案手法.tex:5: Package inputenc Error: Unicode character 法 (U+6CD5)
+(inputenc)                not set up for use with LaTeX.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.5     \section{提案手法
+                             }
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+./提案手法.tex:7: Undefined control sequence.
+l.7     \subsection
+                   {提案手法の概要}
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+
+./提案手法.tex:7: Package inputenc Error: Unicode character 提 (U+63D0)
+(inputenc)                not set up for use with LaTeX.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.7     \subsection{提
+                       案手法の概要}
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+./提案手法.tex:7: Package inputenc Error: Unicode character 案 (U+6848)
+(inputenc)                not set up for use with LaTeX.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.7     \subsection{提案
+                          手法の概要}
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+./提案手法.tex:7: Package inputenc Error: Unicode character 手 (U+624B)
+(inputenc)                not set up for use with LaTeX.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.7     \subsection{提案手
+                             法の概要}
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+./提案手法.tex:7: Package inputenc Error: Unicode character 法 (U+6CD5)
+(inputenc)                not set up for use with LaTeX.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.7     \subsection{提案手法
+                                の概要}
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+./提案手法.tex:7: Package inputenc Error: Unicode character の (U+306E)
+(inputenc)                not set up for use with LaTeX.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.7     \subsection{提案手法の
+                                   概要}
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+./提案手法.tex:7: Package inputenc Error: Unicode character 概 (U+6982)
+(inputenc)                not set up for use with LaTeX.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.7     \subsection{提案手法の概
+                                      要}
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+./提案手法.tex:7: Package inputenc Error: Unicode character 要 (U+8981)
+(inputenc)                not set up for use with LaTeX.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.7     \subsection{提案手法の概要
+                                         }
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+./提案手法.tex:9: Package inputenc Error: Unicode character 提 (U+63D0)
+(inputenc)                not set up for use with LaTeX.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.9     提
+           案手法の概要を以下に示す．
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+./提案手法.tex:9: Package inputenc Error: Unicode character 案 (U+6848)
+(inputenc)                not set up for use with LaTeX.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.9     提案
+              手法の概要を以下に示す．
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+./提案手法.tex:9: Package inputenc Error: Unicode character 手 (U+624B)
+(inputenc)                not set up for use with LaTeX.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.9     提案手
+                 法の概要を以下に示す．
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+./提案手法.tex:9: Package inputenc Error: Unicode character 法 (U+6CD5)
+(inputenc)                not set up for use with LaTeX.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.9     提案手法
+                    の概要を以下に示す．
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+./提案手法.tex:9: Package inputenc Error: Unicode character の (U+306E)
+(inputenc)                not set up for use with LaTeX.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.9     提案手法の
+                       概要を以下に示す．
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+./提案手法.tex:9: Package inputenc Error: Unicode character 概 (U+6982)
+(inputenc)                not set up for use with LaTeX.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.9     提案手法の概
+                          要を以下に示す．
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+./提案手法.tex:9: Package inputenc Error: Unicode character 要 (U+8981)
+(inputenc)                not set up for use with LaTeX.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.9     提案手法の概要
+                             を以下に示す．
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+./提案手法.tex:9: Package inputenc Error: Unicode character を (U+3092)
+(inputenc)                not set up for use with LaTeX.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.9     提案手法の概要を
+                                以下に示す．
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+./提案手法.tex:9: Package inputenc Error: Unicode character 以 (U+4EE5)
+(inputenc)                not set up for use with LaTeX.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.9     提案手法の概要を以
+                                   下に示す．
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+./提案手法.tex:9: Package inputenc Error: Unicode character 下 (U+4E0B)
+(inputenc)                not set up for use with LaTeX.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.9     提案手法の概要を以下
+                                      に示す．
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+./提案手法.tex:9: Package inputenc Error: Unicode character に (U+306B)
+(inputenc)                not set up for use with LaTeX.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.9     提案手法の概要を以下に
+                                         示す．
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+./提案手法.tex:9: Package inputenc Error: Unicode character 示 (U+793A)
+(inputenc)                not set up for use with LaTeX.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.9     提案手法の概要を以下に示
+                                            す．
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+./提案手法.tex:9: Package inputenc Error: Unicode character す (U+3059)
+(inputenc)                not set up for use with LaTeX.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.9     提案手法の概要を以下に示す
+                                               ．
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+./提案手法.tex:9: Package inputenc Error: Unicode character ． (U+FF0E)
+(inputenc)                not set up for use with LaTeX.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.9     提案手法の概要を以下に示す．
+                                                  
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+./提案手法.tex:12: LaTeX Error: Environment lstlisting undefined.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.12 \begin{lstlisting}
+                       [caption=hoge,label=fuga]
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+
+./提案手法.tex:13: Package inputenc Error: Unicode character こ (U+3053)
+(inputenc)                not set up for use with LaTeX.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.13 // こ
+           のとき、FloatとIntegerのレイヤの活性化は排反で�...
+
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+./提案手法.tex:13: Package inputenc Error: Unicode character の (U+306E)
+(inputenc)                not set up for use with LaTeX.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.13 // この
+              とき、FloatとIntegerのレイヤの活性化は排反で�...
+
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+./提案手法.tex:13: Package inputenc Error: Unicode character と (U+3068)
+(inputenc)                not set up for use with LaTeX.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.13 // このと
+                 き、FloatとIntegerのレイヤの活性化は排反で�...
+
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+./提案手法.tex:13: Package inputenc Error: Unicode character き (U+304D)
+(inputenc)                not set up for use with LaTeX.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.13 // このとき
+                    、FloatとIntegerのレイヤの活性化は排反で�...
+
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+./提案手法.tex:13: Package inputenc Error: Unicode character 、 (U+3001)
+(inputenc)                not set up for use with LaTeX.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.13 // このとき、
+                       FloatとIntegerのレイヤの活性化は排反で�...
+
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+./提案手法.tex:13: Package inputenc Error: Unicode character と (U+3068)
+(inputenc)                not set up for use with LaTeX.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.13 // このとき、Floatと
+                               Integerのレイヤの活性化は排反で�...
+
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+./提案手法.tex:13: Package inputenc Error: Unicode character の (U+306E)
+(inputenc)                not set up for use with LaTeX.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.13 // このとき、FloatとIntegerの
+                                         レイヤの活性化は排反で�...
+
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+./提案手法.tex:13: Package inputenc Error: Unicode character レ (U+30EC)
+(inputenc)                not set up for use with LaTeX.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.13 // このとき、FloatとIntegerのレ
+                                            イヤの活性化は排反で�...
+
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+./提案手法.tex:13: Package inputenc Error: Unicode character イ (U+30A4)
+(inputenc)                not set up for use with LaTeX.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.13 // このとき、FloatとIntegerのレイ
+                                               ヤの活性化は排反で�...
+
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+./提案手法.tex:13: Package inputenc Error: Unicode character ヤ (U+30E4)
+(inputenc)                not set up for use with LaTeX.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.13 // このとき、FloatとIntegerのレイヤ
+                                                  の活性化は排反で�...
+
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+./提案手法.tex:13: Package inputenc Error: Unicode character の (U+306E)
+(inputenc)                not set up for use with LaTeX.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.13 ...のとき、FloatとIntegerのレイヤの
+                                                  活性化は排反でよ�...
+
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+./提案手法.tex:13: Package inputenc Error: Unicode character 活 (U+6D3B)
+(inputenc)                not set up for use with LaTeX.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.13 ...とき、FloatとIntegerのレイヤの活
+                                                  性化は排反でよい�...
+
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+./提案手法.tex:13: Package inputenc Error: Unicode character 性 (U+6027)
+(inputenc)                not set up for use with LaTeX.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.13 ...き、FloatとIntegerのレイヤの活性
+                                                  化は排反でよい気�...
+
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+./提案手法.tex:13: Package inputenc Error: Unicode character 化 (U+5316)
+(inputenc)                not set up for use with LaTeX.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.13 ...、FloatとIntegerのレイヤの活性化
+                                                  は排反でよい気が�...
+
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+./提案手法.tex:13: Package inputenc Error: Unicode character は (U+306F)
+(inputenc)                not set up for use with LaTeX.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.13 ...FloatとIntegerのレイヤの活性化は
+                                                  排反でよい気がする
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+./提案手法.tex:13: Package inputenc Error: Unicode character 排 (U+6392)
+(inputenc)                not set up for use with LaTeX.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.13 ...atとIntegerのレイヤの活性化は排
+                                                  反でよい気がする
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+./提案手法.tex:13: Package inputenc Error: Unicode character 反 (U+53CD)
+(inputenc)                not set up for use with LaTeX.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.13 ...��Integerのレイヤの活性化は排反
+                                                  でよい気がする
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+./提案手法.tex:13: Package inputenc Error: Unicode character で (U+3067)
+(inputenc)                not set up for use with LaTeX.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.13 ...ntegerのレイヤの活性化は排反で
+                                                  よい気がする
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+./提案手法.tex:13: Package inputenc Error: Unicode character よ (U+3088)
+(inputenc)                not set up for use with LaTeX.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.13 ...gerのレイヤの活性化は排反でよ
+                                                  い気がする
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+./提案手法.tex:13: Package inputenc Error: Unicode character い (U+3044)
+(inputenc)                not set up for use with LaTeX.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.13 ...のレイヤの活性化は排反でよい
+                                                  気がする
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+./提案手法.tex:13: Package inputenc Error: Unicode character 気 (U+6C17)
+(inputenc)                not set up for use with LaTeX.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.13 ...レイヤの活性化は排反でよい気
+                                                  がする
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+./提案手法.tex:13: Package inputenc Error: Unicode character が (U+304C)
+(inputenc)                not set up for use with LaTeX.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.13 ...イヤの活性化は排反でよい気が
+                                                  する
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+./提案手法.tex:13: Package inputenc Error: Unicode character す (U+3059)
+(inputenc)                not set up for use with LaTeX.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.13 ...ヤの活性化は排反でよい気がす
+                                                  る
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+./提案手法.tex:13: Package inputenc Error: Unicode character る (U+308B)
+(inputenc)                not set up for use with LaTeX.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.13 ...の活性化は排反でよい気がする
+                                                  
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+./提案手法.tex:16: Package inputenc Error: Unicode character い (U+3044)
+(inputenc)                not set up for use with LaTeX.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.16 // い
+           ちいち切り替えがめんどう
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+./提案手法.tex:16: Package inputenc Error: Unicode character ち (U+3061)
+(inputenc)                not set up for use with LaTeX.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.16 // いち
+              いち切り替えがめんどう
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+./提案手法.tex:16: Package inputenc Error: Unicode character い (U+3044)
+(inputenc)                not set up for use with LaTeX.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.16 // いちい
+                 ち切り替えがめんどう
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+./提案手法.tex:16: Package inputenc Error: Unicode character ち (U+3061)
+(inputenc)                not set up for use with LaTeX.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.16 // いちいち
+                    切り替えがめんどう
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+./提案手法.tex:16: Package inputenc Error: Unicode character 切 (U+5207)
+(inputenc)                not set up for use with LaTeX.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.16 // いちいち切
+                       り替えがめんどう
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+./提案手法.tex:16: Package inputenc Error: Unicode character り (U+308A)
+(inputenc)                not set up for use with LaTeX.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.16 // いちいち切り
+                          替えがめんどう
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+./提案手法.tex:16: Package inputenc Error: Unicode character 替 (U+66FF)
+(inputenc)                not set up for use with LaTeX.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.16 // いちいち切り替
+                             えがめんどう
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+./提案手法.tex:16: Package inputenc Error: Unicode character え (U+3048)
+(inputenc)                not set up for use with LaTeX.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.16 // いちいち切り替え
+                                がめんどう
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+./提案手法.tex:16: Package inputenc Error: Unicode character が (U+304C)
+(inputenc)                not set up for use with LaTeX.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.16 // いちいち切り替えが
+                                   めんどう
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+./提案手法.tex:16: Package inputenc Error: Unicode character め (U+3081)
+(inputenc)                not set up for use with LaTeX.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.16 // いちいち切り替えがめ
+                                      んどう
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+./提案手法.tex:16: Package inputenc Error: Unicode character ん (U+3093)
+(inputenc)                not set up for use with LaTeX.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.16 // いちいち切り替えがめん
+                                         どう
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+./提案手法.tex:16: Package inputenc Error: Unicode character ど (U+3069)
+(inputenc)                not set up for use with LaTeX.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.16 // いちいち切り替えがめんど
+                                            う
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+./提案手法.tex:16: Package inputenc Error: Unicode character う (U+3046)
+(inputenc)                not set up for use with LaTeX.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.16 // いちいち切り替えがめんどう
+                                               
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+./提案手法.tex:21: Package inputenc Error: Unicode character 排 (U+6392)
+(inputenc)                not set up for use with LaTeX.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.21 // 排
+           反ではないから２つ条件含むのどうなん？
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+./提案手法.tex:21: Package inputenc Error: Unicode character 反 (U+53CD)
+(inputenc)                not set up for use with LaTeX.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.21 // 排反
+              ではないから２つ条件含むのどうなん？
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+./提案手法.tex:21: Package inputenc Error: Unicode character で (U+3067)
+(inputenc)                not set up for use with LaTeX.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.21 // 排反で
+                 はないから２つ条件含むのどうなん？
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+./提案手法.tex:21: Package inputenc Error: Unicode character は (U+306F)
+(inputenc)                not set up for use with LaTeX.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.21 // 排反では
+                    ないから２つ条件含むのどうなん？
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+./提案手法.tex:21: Package inputenc Error: Unicode character な (U+306A)
+(inputenc)                not set up for use with LaTeX.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.21 // 排反ではな
+                       いから２つ条件含むのどうなん？
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+./提案手法.tex:21: Package inputenc Error: Unicode character い (U+3044)
+(inputenc)                not set up for use with LaTeX.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.21 // 排反ではない
+                          から２つ条件含むのどうなん？
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+./提案手法.tex:21: Package inputenc Error: Unicode character か (U+304B)
+(inputenc)                not set up for use with LaTeX.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.21 // 排反ではないか
+                             ら２つ条件含むのどうなん？
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+./提案手法.tex:21: Package inputenc Error: Unicode character ら (U+3089)
+(inputenc)                not set up for use with LaTeX.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.21 // 排反ではないから
+                                ２つ条件含むのどうなん？
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+./提案手法.tex:21: Package inputenc Error: Unicode character ２ (U+FF12)
+(inputenc)                not set up for use with LaTeX.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.21 // 排反ではないから２
+                                   つ条件含むのどうなん？
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+./提案手法.tex:21: Package inputenc Error: Unicode character つ (U+3064)
+(inputenc)                not set up for use with LaTeX.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.21 // 排反ではないから２つ
+                                      条件含むのどうなん？
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+./提案手法.tex:21: Package inputenc Error: Unicode character 条 (U+6761)
+(inputenc)                not set up for use with LaTeX.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.21 // 排反ではないから２つ条
+                                         件含むのどうなん？
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+./提案手法.tex:21: Package inputenc Error: Unicode character 件 (U+4EF6)
+(inputenc)                not set up for use with LaTeX.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.21 // 排反ではないから２つ条件
+                                            含むのどうなん？
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+./提案手法.tex:21: Package inputenc Error: Unicode character 含 (U+542B)
+(inputenc)                not set up for use with LaTeX.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.21 // 排反ではないから２つ条件含
+                                               むのどうなん？
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+./提案手法.tex:21: Package inputenc Error: Unicode character む (U+3080)
+(inputenc)                not set up for use with LaTeX.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.21 // 排反ではないから２つ条件含む
+                                                  のどうなん？
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+./提案手法.tex:21: Package inputenc Error: Unicode character の (U+306E)
+(inputenc)                not set up for use with LaTeX.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.21 ...反ではないから２つ条件含むの
+                                                  どうなん？
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+./提案手法.tex:21: Package inputenc Error: Unicode character ど (U+3069)
+(inputenc)                not set up for use with LaTeX.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.21 ...ではないから２つ条件含むのど
+                                                  うなん？
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+./提案手法.tex:21: Package inputenc Error: Unicode character う (U+3046)
+(inputenc)                not set up for use with LaTeX.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.21 ...はないから２つ条件含むのどう
+                                                  なん？
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+./提案手法.tex:21: Package inputenc Error: Unicode character な (U+306A)
+(inputenc)                not set up for use with LaTeX.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.21 ...ないから２つ条件含むのどうな
+                                                  ん？
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+./提案手法.tex:21: Package inputenc Error: Unicode character ん (U+3093)
+(inputenc)                not set up for use with LaTeX.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.21 ...いから２つ条件含むのどうなん
+                                                  ？
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+./提案手法.tex:21: Package inputenc Error: Unicode character ？ (U+FF1F)
+(inputenc)                not set up for use with LaTeX.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.21 ...から２つ条件含むのどうなん？
+                                                  
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+./提案手法.tex:22: Misplaced alignment tab character &.
+l.22 <Layer condition={layerState.Float &
+                                         & !layerState.Integer}>
+I can't figure out why you would want to use a tab mark
+here. If you just want an ampersand, the remedy is
+simple: Just type `I\&' now. But if some right brace
+up above has ended a previous alignment prematurely,
+you're probably due for more error messages, and you
+might try typing `S' now just to see what is salvageable.
+
+./提案手法.tex:22: Misplaced alignment tab character &.
+l.22 <Layer condition={layerState.Float &&
+                                           !layerState.Integer}>
+I can't figure out why you would want to use a tab mark
+here. If you just want an ampersand, the remedy is
+simple: Just type `I\&' now. But if some right brace
+up above has ended a previous alignment prematurely,
+you're probably due for more error messages, and you
+might try typing `S' now just to see what is salvageable.
+
+
+./提案手法.tex:23: LaTeX Error: \begin{document} ended by \end{lstlisting}.
+
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.23 \end{lstlisting}
+                     
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+
+./提案手法.tex:31: LaTeX Error: The font size command \normalsize is not de
+fined:
+               there is probably something wrong with the class file.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.31 \end{document}
+                   
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+[1{/usr/local/texlive/2021/texmf-var/fonts/map/pdftex/updmap/pdftex.map}]
+(/Users/oonohiroshitaka/Documents/research/out/提案手法.aux) )
+(\end occurred when \ifx on line 30 was incomplete) 
+Here is how much of TeX's memory you used:
+ 254 strings out of 478542
+ 5815 string characters out of 5850387
+ 296580 words of memory out of 5000000
+ 18279 multiletter control sequences out of 15000+600000
+ 403430 words of font info for 27 fonts, out of 8000000 for 9000
+ 1141 hyphenation exceptions out of 8191
+ 28i,5n,38p,141b,76s stack positions out of 5000i,500n,10000p,200000b,80000s
+</usr/local/texlive/2021/tex
+mf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb>
+Output written on /Users/oonohiroshitaka/Documents/research/out/提案手法.pd
+f (1 page, 18526 bytes).
+PDF statistics:
+ 13 PDF objects out of 1000 (max. 8388607)
+ 7 compressed objects within 1 object stream
+ 0 named destinations out of 1000 (max. 500000)
+ 1 words of extra memory for PDF output out of 10000 (max. 10000000)
+
