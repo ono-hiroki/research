@@ -10,7 +10,7 @@
 \contentsline {section}{\numberline {3}提案手法}{1}{}%
 \contentsline {subsection}{\numberline {3.1}改善点}{1}{}%
 \contentsline {subsubsection}{\numberline {(1)}改善点一覧}{1}{}%
-\contentsline {subsubsection}{\numberline {(2)}layerのde/active時に新しいレイヤーを定義できないようにする}{2}{}%
+\contentsline {subsubsection}{\numberline {(2)}layerのde/active時に新しいレイヤーを定義できないようにする}{1}{}%
 \contentsline {subsubsection}{\numberline {(3)}layer paramsはin/activeの両方の状態を持つ}{2}{}%
 \contentsline {subsubsection}{\numberline {(4)}layer paramsはlayerのin/active状態に依存をするようにしたい}{2}{}%
 \contentsline {subsubsection}{\numberline {(5)}layer paramsの値を入れるときに新しいlayerを定義できないようにする}{2}{}%
@@ -26,6 +26,6 @@
 \contentsline {subsection}{\numberline {4.2}テストの導入}{2}{}%
 \contentsline {subsection}{\numberline {4.3}各種、具体的な実装内容}{2}{}%
 \contentsline {section}{\numberline {5}評価}{2}{}%
-\contentsline {subsection}{\numberline {5.1}できるようになったこと}{3}{}%
-\contentsline {section}{\numberline {6}まとめ}{3}{}%
-\contentsline {section}{\numberline {7}参考文献}{3}{}%
+\contentsline {subsection}{\numberline {5.1}できるようになったこと}{2}{}%
+\contentsline {section}{\numberline {6}まとめ}{2}{}%
+\contentsline {section}{\numberline {7}参考文献}{2}{}%
