@@ -8,21 +8,24 @@
 \contentsline {subsection}{\numberline {2.2}React COP}{1}{}%
 \contentsline {subsection}{\numberline {2.3}EventCJに複合層を導入}{1}{}%
 \contentsline {section}{\numberline {3}提案手法}{1}{}%
-\contentsline {subsection}{\numberline {3.1}改善点の洗い出し}{1}{}%
-\contentsline {subsection}{\numberline {3.2}実装する内容を決める}{1}{}%
-\contentsline {subsection}{\numberline {3.3}評価方法}{1}{}%
-\contentsline {section}{\numberline {4}改善点の洗い出し}{2}{}%
-\contentsline {subsection}{\numberline {4.1}試しに作成したアプリ}{2}{}%
-\contentsline {subsection}{\numberline {4.2}見つかった改善点}{2}{}%
-\contentsline {section}{\numberline {5}実装内容}{2}{}%
-\contentsline {subsection}{\numberline {5.1}改善する内容}{2}{}%
-\contentsline {subsection}{\numberline {5.2}型（typescript）の導入}{2}{}%
-\contentsline {subsection}{\numberline {5.3}テストの導入}{2}{}%
-\contentsline {section}{\numberline {6}実装}{2}{}%
-\contentsline {subsection}{\numberline {6.1}tsの導入}{2}{}%
-\contentsline {subsection}{\numberline {6.2}テストの導入}{2}{}%
-\contentsline {subsection}{\numberline {6.3}各種、具体的な実装内容}{2}{}%
-\contentsline {section}{\numberline {7}評価}{2}{}%
-\contentsline {subsection}{\numberline {7.1}できるようになったこと}{2}{}%
-\contentsline {section}{\numberline {8}まとめ}{2}{}%
-\contentsline {section}{\numberline {9}参考文献}{2}{}%
+\contentsline {subsection}{\numberline {3.1}改善点}{1}{}%
+\contentsline {subsubsection}{\numberline {(1)}改善点一覧}{1}{}%
+\contentsline {subsubsection}{\numberline {(2)}layerのde/active時に新しいレイヤーを定義できないようにする}{2}{}%
+\contentsline {subsubsection}{\numberline {(3)}layer paramsはin/activeの両方の状態を持つ}{2}{}%
+\contentsline {subsubsection}{\numberline {(4)}layer paramsはlayerのin/active状態に依存をするようにしたい}{2}{}%
+\contentsline {subsubsection}{\numberline {(5)}layer paramsの値を入れるときに新しいlayerを定義できないようにする}{2}{}%
+\contentsline {subsubsection}{\numberline {(6)}layer grop的なのをついか}{2}{}%
+\contentsline {subsubsection}{\numberline {(7)}layerの活性化条件を定義できる}{2}{}%
+\contentsline {subsubsection}{\numberline {(8)}layerの活性化は排反}{2}{}%
+\contentsline {subsection}{\numberline {3.2}実装する内容}{2}{}%
+\contentsline {subsubsection}{\numberline {(1)}typescriptでの実装}{2}{}%
+\contentsline {subsubsection}{\numberline {(2)}テストの追加}{2}{}%
+\contentsline {subsection}{\numberline {3.3}評価方法}{2}{}%
+\contentsline {section}{\numberline {4}実装}{2}{}%
+\contentsline {subsection}{\numberline {4.1}tsの導入}{2}{}%
+\contentsline {subsection}{\numberline {4.2}テストの導入}{2}{}%
+\contentsline {subsection}{\numberline {4.3}各種、具体的な実装内容}{2}{}%
+\contentsline {section}{\numberline {5}評価}{2}{}%
+\contentsline {subsection}{\numberline {5.1}できるようになったこと}{3}{}%
+\contentsline {section}{\numberline {6}まとめ}{3}{}%
+\contentsline {section}{\numberline {7}参考文献}{3}{}%

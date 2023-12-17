@@ -7,15 +7,57 @@
     react copの改善点を洗い出し、それを解決するための機能を追加した。
     本章では、本研究で提案する手法について述べる。
 
-    \subsection{改善点の洗い出し}
-    まず、本研究で解決したい問題点を洗い出す。
-    react copは、まだ作られてから日が浅いため、まだまだ機能が不足していると考えられる。
-    そこで、react copの問題点を洗い出すことによって、react copの機能を拡張することができると考えた。
-    実際にアプリを作成することで、問題点を洗い出す。
+    \subsection{改善点}
 
-    \subsection{実装する内容を決める}
-    - 洗い出した問題点を解決するために、react copに機能を追加する。
-    - 関連研究にある複合層、多層の機能を追加する。
+    \subsubsection{改善点一覧}
+    \begin{itemize}
+    \item layerのde/active時に新しいレイヤーを定義できないようにする
+    \item layer paramsはin/activeの両方の状態を持つ
+    \item layer paramsはlayerのin/active状態に依存をするようにしたい
+    \item layer paramsの値を入れるときに新しいlayerを定義できないようにする
+    \item layer grop的なのをついか
+    \item layerの活性化条件を定義できる
+    \begin{itemize}
+    \item 複合層
+    \item 多層
+    \end{itemize}
+    \item layerの活性化は排反
+    \item typescriptでの実装
+    \item テストの追加
+    \end{itemize}
+
+    \subsubsection{layerのde/active時に新しいレイヤーを定義できないようにする}
+
+    \subsubsection{layer paramsはin/activeの両方の状態を持つ}
+
+    \subsubsection{layer paramsはlayerのin/active状態に依存をするようにしたい}
+
+    \subsubsection{layer paramsの値を入れるときに新しいlayerを定義できないようにする}
+
+    \subsubsection{layer grop的なのをついか}
+
+    \subsubsection{layerの活性化条件を定義できる}
+
+    \subsubsection{layerの活性化は排反}
+        \begin{lstlisting}[caption=hoge,label=fuga]
+        // このとき、FloatとIntegerのレイヤの活性化は排反でよい気がする
+        const [getHoge, setHoge] = useLayerParams('', ["Float", "Integer"]);
+
+        // いちいち切り替えがめんどう
+        layerManager.deactivateLayer("Integer");
+        layerManager.activateLayer("Float");
+
+
+        // 排反ではないから２つ条件含むのどうなん？
+        <Layer condition={layerState.Float && !layerState.Integer}>
+        \end{lstlisting}
+
+    \subsection{実装する内容}
+
+    \subsubsection{typescriptでの実装}
+
+    \subsubsection{テストの追加}
+
 
     \subsection{評価方法}
     - 実装前と後で、できることの違いを比較する。
