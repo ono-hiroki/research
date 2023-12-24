@@ -1,6 +1,6 @@
 f := final
 
 c:
-	platex $(f).tex && dvipdfmx $(f).dvi && open $(f).pdf
+	platex $(f).tex && dvipdfmx $(f).dvi && platex $(f).tex && dvipdfmx $(f).dvi && open $(f).pdf
 	rm -f *.aux *.dvi *.log *.out
-	cd components && rm -f *.aux
+	find components -name '*.aux' -type f -delete
