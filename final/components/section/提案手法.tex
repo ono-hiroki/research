@@ -19,9 +19,9 @@
     この問題を解決するために、レイヤーを一つのオブジェクトとして管理することとした。
 
     以降では、react cop2の実装について述べる。
-    react copで代替となる機能を提供するために、react cop2では、以下の機能を提供する。
+    ReactCOPで代替となる機能を提供するために、react cop2では、以下の機能を提供する。
+    ReactCOP2では、カスタムコンテキストを用いて、レイヤーの操作や取得などの機能を提供する。
     react copから改善された機能を以下に示す。
-
 
 %     layerの管理の方法を大きく変更した。
 %     同じくuseStateを用いてlayerの管理を行うが、state変数を参照型のクラスのインスタンスから、イミュータブルなデータ構造である配列に変更した。
@@ -29,21 +29,75 @@
 %     しかし、イミュータブルなデータ構造である配列に変更することで、state変数の値の変更を検知できるようになった。
 
 
-
-
     \subsection{代替する機能}
-    \subsubsection{アクティブなレイヤーの一つを取得できる}
-    \subsubsection{レイヤー名を指定してレイヤーを取得できる}
-    \subsubsection{レイヤー名を指定してレイヤーをアクティブにできる}
-    \subsubsection{レイヤー名を指定してレイヤーを非アクティブにできる}
+    \subsubsection{レイヤーパラムの設定・取得}
+        React copでは、レイヤーパラムの設定・取得ができるuseLayerParamsというカスタムフックを提供している。
+        このカスタムフックは、以下のように使用する。
+        \begin{lstlisting}[]
+            // レイヤーパラム
+            const [getHoge, setHoge] = useLayerParams('hoge', ["Hoge"]);
+            getHoge() // hoge
+            setHoge('fuga',"Hoge")
+            getHoge() // fuga
 
+        \end{lstlisting}
+        useLayerParamsの第一引数には、レイヤーパラムの初期値、第二引数には、レイヤー名を指定することで、レイヤーパラムの値を設定できる。
+        レイヤー名は複数指定することができる。
 
+% react cop2で         setLayerParams、getLayerParamsというメソッドを提供している。
 
+        ReactCOP2では、レイヤーパラムの設定ができるsetLayerParams、取得ができるgetLayerParamsというメソッドを提供する。
+
+        setHogeの第一引数には、レイヤーパラムの値、第二引数には、レイヤー名を指定することでレイヤーパラムの値を設定できる。
+        getHogeの引数には、レイヤー名を指定することで、レイヤーパラムの値を取得できる。
+        引数にレイヤー名を指定しない場合は、活性化したレイヤーのレイヤーパラムの値を取得する。
+        ただし、活性化したレイヤーが複数ある場合は、最初に取得したレイヤーのレイヤーパラムの値を取得する。
+        レイヤーの並び順は、レイヤー名を登録した順番である。
+
+        ReactCOP2では、レイヤーパラムの設定ができる
+    \subsubsection{レイヤーの活性化・非活性化}
+        ReactCOPでは、レイヤーの活性化・非活性化ができるuseLayerManagerというカスタムフックを提供している。
+        このカスタムフックは、以下のように使用する。
+        \begin{lstlisting}[]
+            const layerManager = useLayerManager();
+            layerManager.activateLayer("Float");
+            layerManager.deactivateLayer("Integer");
+        \end{lstlisting}
+        activateLayerの引数には、レイヤー名を指定することで、レイヤーを活性化できる。
+        deactivateLayerの引数には、レイヤー名を指定することで、レイヤーを非活性化できる。
+
+    \subsubsection{レイヤーの活性化情報の取得}
+        ReactCOPでは、レイヤーの活性化情報を取得できるuseLayerManagerというカスタムフックはgetLayerStateというメソッドを提供している。
+        このメソッドは、以下のように使用する。
+        \begin{lstlisting}[]
+            const layerManager = useLayerManager();
+            const layerState = layerManager.getLayerState();
+
+            layerState.Float
+            layerState.Integer
+        \end{lstlisting}
+        layerState.{レイヤー名}で、レイヤーの活性化情報を取得できる。
+        ただし、あらかじめレイヤーを活性化・非活性化していないと、レイヤーの活性化情報は取得でず、undefinedが返される。
+    \subsubsection{レイヤーが活性化しているかどうかの判定}
+        ReactCOPでは、レイヤーが活性化しているかどうかの判定ができるuseLayerManagerというカスタムフックはisActiveLayerというメソッドを提供している。
+        このメソッドは、以下のように使用する。
+        \begin{lstlisting}[]
+                const layerManager = useLayerManager();
+                // レイヤーがactiveかどうかを判定
+                layerManager.isActiveLayer("Float")　// true or false
+        \end{lstlisting}
+        isActiveLayerの引数には、レイヤー名を指定することで、レイヤーが活性化しているかどうかを判定できる。
+        レイヤーが活性化している場合は、trueが返される。
     \subsection{改善点}
 
     \subsubsection{改善点一覧}
+
     \begin{itemize}
     \item layerのde/active時に新しいレイヤーを定義できないようにする
+    react copでは、layerのde/active時に新しいレイヤーを定義できてしまう。
+    そのため、意図しないレイヤーが簡単に定義できてしまう。
+    またレイヤーの管理が煩雑になる。
+    コレを解決するために、layerのde/active時に新しいレイヤーを定義できないようにする
     \item layer paramsはin/activeの両方の状態を持つ
     \item layer paramsはlayerのin/active状態に依存をするようにしたい
     \item layer paramsの値を入れるときに新しいlayerを定義できないようにする
@@ -59,11 +113,11 @@
     \end{itemize}
 
     \subsubsection{layerのde/active時に新しいレイヤーを定義できないようにする}
-    react copでは、layerのde/active時に新しいレイヤーを定義できてしまう。
+    ReactCOPでは、layerのde/active時に新しいレイヤーを定義できてしまう。
     layerのde/active時に新しいレイヤーを定義できると意図しないレイヤーが簡単に定義できてしまう。
     またレイヤーの管理が煩雑になる。
 
-    react cop2では、layerのde/active時に新しいレイヤーを定義できないようにする。
+    ReactCOP2では、layerのde/active時に新しいレイヤーを定義できないようにする。
     これによって、意図しないレイヤーが簡単に定義できなくなり、レイヤーの管理が煩雑にならない。
 
 
