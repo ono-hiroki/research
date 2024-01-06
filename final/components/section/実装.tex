@@ -1,17 +1,56 @@
 \expandafter\ifx\csname ifdraft\endcsname\relax
 \documentclass{jsarticle}
 \begin{document}
-    \fi
-    \section{実装}
+\fi
+\section{実装}
+大まかな構成はReactCOPと同じである。
+useStateを用いてレイヤー情報を管理する。
+レイヤー情報はProviderを用いて、子コンポーネントに渡す。
+子コンポーネントは、useContextを用いてレイヤー情報を取得する。
 
-    \subsection{layerのde/active時に新しいレイヤーを定義できないようにする}
-    コードは以下のようになる。
-    レイヤーの名前が存在するかどうかを確認し、存在しない場合はエラーを出すようにしている。
+\subsection{レイヤーの型}
+レイヤーの型は、以下のように定義する。
+\begin{lstlisting}[caption=レイヤーの型]
+export interface Layer {
+    name: string;
+    isActive: boolean; // state
+    group: string;
+    params: any;
+    dependencies?: DependencyGroup;
+}
+\end{lstlisting}
+nameはレイヤーの名前である。
+isActiveはレイヤーが活性化しているかどうかを表す。
+groupはレイヤーのグループ名である。
+paramsはレイヤーパラムである。
+dependenciesはレイヤーが活性化する条件である。
 
-    \subsection{tsの導入}
-    \subsection{テストの導入}
-    \subsection{各種、具体的な実装内容}
+\subsection{代替する機能}
+\subsubsection{レイヤーパラムの設定・取得}
+\subsubsection{ひとつのレイヤーのレイヤーパラムを取得}
+ReactCOPでは、レイヤーパラムの設定・取得ができるgetLayerParamというメソッドを提供している。
+型は以下のように定義する。
+\begin{lstlisting}[caption=getLayerParamの型]
+getLayerParam: (name: string) => any;
+\end{lstlisting}
+レイヤー名を指定することで、レイヤーパラムの値を取得できる。
+レイヤーパラムは何を設定しても良いため、any型である。
 
-    \expandafter\ifx\csname ifdraft\endcsname\relax
+このメソッドは、以下のように使用する。
+\begin{lstlisting}[]
+getLayerParam('hoge')
+\end{lstlisting}
+
+\subsubsection{複数のレイヤーのレイヤーパラムを取得}
+複数のレイヤーパラムを取得したい場合はgetLayersParamというメソッドを提供している。
+% TODO ここに型を書く つぎはここから書く
+
+このメソッドは、以下のように使用する。
+\begin{lstlisting}[]
+getLayersParam(['hoge','fuga'])
+\end{lstlisting}
+
+
+\expandafter\ifx\csname ifdraft\endcsname\relax
 \end{document}
 \fi

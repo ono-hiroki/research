@@ -33,7 +33,7 @@ react copから改善された機能を以下に示す。
 \subsubsection{レイヤーパラムの設定・取得}
 React copでは、レイヤーパラムの設定・取得ができるuseLayerParamsというカスタムフックを提供している。
 このカスタムフックは、以下のように使用する。
-\begin{lstlisting}[]
+\begin{lstlisting}[]      
 // レイヤーパラム
 const [getHoge, setHoge] = useLayerParams('hoge', ["Hoge"]);
 getHoge() // hoge
@@ -49,7 +49,7 @@ getHogeの引数には、レイヤー名を指定することで、レイヤー�
 ただし、活性化したレイヤーが複数ある場合は、最初に取得したレイヤーのレイヤーパラムの値を取得する。
 レイヤーの並び順は、レイヤー名を登録した順番である。
 
-ReactCOP2では、レイヤーパラムの設定ができるsetLayerParams、取得ができるgetLayerParamsというメソッドを提供する。
+ReactCOP2では、レイヤーパラムの設定ができるsetLayerParams、取得ができるgetLayersParamというメソッドを提供する。
 このメソッドは、以下のように使用する。
 % TODO: ここにコードを書く
 setLayerParamsの第一引数には、レイヤー名、第二引数にはレイヤーパラムの値を指定することで、レイヤーパラムの値を設定できる。
