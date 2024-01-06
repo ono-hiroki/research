@@ -55,7 +55,6 @@ ReactCOP2では、レイヤーパラムの設定ができるsetLayerParams、取
 setLayerParamsの第一引数には、レイヤー名、第二引数にはレイヤーパラムの値を指定することで、レイヤーパラムの値を設定できる。
 getLayerParamsの引数には、レイヤー名を指定することで、レイヤーパラムの値を取得できる。
 
-ReactCOP2では、レイヤーパラムの設定ができる
 \subsubsection{レイヤーの活性化・非活性化}
 ReactCOPでは、レイヤーの活性化・非活性化ができるuseLayerManagerというカスタムフックを提供している。
 このカスタムフックは、以下のように使用する。
@@ -66,6 +65,12 @@ layerManager.deactivateLayer("Integer");
 \end{lstlisting}
 activateLayerの引数には、レイヤー名を指定することで、レイヤーを活性化できる。
 deactivateLayerの引数には、レイヤー名を指定することで、レイヤーを非活性化できる。
+
+ReactCOP2では、レイヤーの活性化・非活性化ができるactivateLayer、inactivateLayerというメソッドを提供する。
+このメソッドは、以下のように使用する。
+% TODO: ここにコードを書く
+activateLayerの引数には、レイヤー名を指定することで、レイヤーを活性化できる。
+inactivateLayerの引数には、レイヤー名を指定することで、レイヤーを非活性化できる。
 
 \subsubsection{レイヤーの活性化情報の取得}
 ReactCOPでは、レイヤーの活性化情報を取得できるuseLayerManagerというカスタムフックはgetLayerStateというメソッドを提供している。
@@ -79,6 +84,12 @@ layerState.Integer
 \end{lstlisting}
 layerState.{レイヤー名}で、レイヤーの活性化情報を取得できる。
 ただし、あらかじめレイヤーを活性化・非活性化していないと、レイヤーの活性化情報は取得でず、undefinedが返される。
+
+ReactCOP2では、レイヤーの活性化情報を取得できるgetLayerというメソッドを提供する。% TODO: getLayerメソッドを追加する
+このメソッドは、以下のように使用する。
+% TODO: ここにコードを書く
+getLayerの引数には、レイヤー名を指定することで、レイヤーの情報を取得できる。
+
 \subsubsection{レイヤーが活性化しているかどうかの判定}
 ReactCOPでは、レイヤーが活性化しているかどうかの判定ができるuseLayerManagerというカスタムフックはisActiveLayerというメソッドを提供している。
 このメソッドは、以下のように使用する。
@@ -89,7 +100,13 @@ layerManager.isActiveLayer("Float")// true or false
 \end{lstlisting}
 isActiveLayerの引数には、レイヤー名を指定することで、レイヤーが活性化しているかどうかを判定できる。
 レイヤーが活性化している場合は、trueが返される。
+
+ReactCOP2では、レイヤーが活性化しているかどうかの判定ができるメソッドは提供しない。
+代わりに、レイヤーの活性化情報を取得できるgetLayerメソッドから、レイヤーが活性化情報を取得すれば、レイヤーが活性化しているかどうかの判定ができる。
+TODO: ここにコードを書く
+
 \subsection{改善点}
+
 
 \subsubsection{改善点一覧}
 
@@ -99,19 +116,11 @@ isActiveLayerの引数には、レイヤー名を指定することで、レイ�
 	      そのため、意図しないレイヤーが簡単に定義できてしまう。
 	      またレイヤーの管理が煩雑になる。
 	      コレを解決するために、layerのde/active時に新しいレイヤーを定義できないようにする
-	\item layer paramsはin/activeの両方の状態を持つ
-	\item layer paramsはlayerのin/active状態に依存をするようにしたい
 	\item layer paramsの値を入れるときに新しいlayerを定義できないようにする
-	\item layer grop的なのをついか
-	\item layerの活性化条件を定義できる
-	      \begin{itemize}
-		      \item 複合層
-		      \item 多層
-	      \end{itemize}
-	\item layerの活性化は排反
 	\item typescriptでの実装
 	\item テストの追加
 \end{itemize}
+
 
 \subsubsection{layerのde/active時に新しいレイヤーを定義できないようにする}
 ReactCOPでは、layerのde/active時に新しいレイヤーを定義できてしまう。
@@ -122,36 +131,122 @@ ReactCOP2では、layerのde/active時に新しいレイヤーを定義できな
 これによって、意図しないレイヤーが簡単に定義できなくなり、レイヤーの管理が煩雑にならない。
 
 
-\subsubsection{layer paramsはin/activeの両方の状態を持つ}
-
-\subsubsection{layer paramsはlayerのin/active状態に依存をするようにしたい}
-
-\subsubsection{layer paramsの値を入れるときに新しいlayerを定義できないようにする}
-
-\subsubsection{layer grop的なのをついか}
-
 \subsubsection{layerの活性化条件を定義できる}
 
-\subsubsection{layerの活性化は排反}
-\begin{lstlisting}[caption=hoge,label=fuga]
-// このとき、FloatとIntegerのレイヤの活性化は排反でよい気がする
-const [getHoge, setHoge] = useLayerParams('', ["Float", "Integer"]);
+% \subsubsection{layerの活性化は排反}
+% \begin{lstlisting}[caption=hoge,label=fuga]
+% // このとき、FloatとIntegerのレイヤの活性化は排反でよい気がする
+% const [getHoge, setHoge] = useLayerParams('', ["Float", "Integer"]);
 
-// いちいち切り替えがめんどう
-layerManager.deactivateLayer("Integer");
-layerManager.activateLayer("Float");
+% // いちいち切り替えがめんどう
+% layerManager.deactivateLayer("Integer");
+% layerManager.activateLayer("Float");
 
 
-// 排反ではないから２つ条件含むのどうなん？
-<Layer condition={layerState.Float && !layerState.Integer}>
-\end{lstlisting}
+% // 排反ではないから２つ条件含むのどうなん？
+% <Layer condition={layerState.Float && !layerState.Integer}>
+% \end{lstlisting}
 
-\subsection{実装する内容}
 
-\subsubsection{typescriptでの実装}
+
+\subsection{機能追加}
+
+\subsubsection{機能追加一覧}
+
+\begin{itemize}
+	\item アクティブなレイヤーを取得する
+		getActiveLayers: () => Layers;
+	\item レイヤーのパラメーターを取得する
+		getLayersParam: (names: string[]) => any[];
+		getAllLayersParams: () => any;
+		getActiveLayersParams: () => any;
+		getLayerParamsByGroup: (group: string) => any;
+	\item グループを指定してレイヤーを取得する
+		getLayersByGroup: (group: string) => Layers;
+		getActiveLayersByGroup: (group: string) => Layers;
+		getInactiveLayersByGroup: (group: string) => Layers;
+
+% evaluateDependencies: (dependencies: DependencyGroup) => boolean;
+% applyDependenciesToAllLayers: (layers: Layers) => Layers;
+
+% セットする系
+	\item レイヤーを追加する
+		addLayer: (layer: Layer) => void;
+	\item レイヤーを削除する
+		removeLayer: (name: string) => void;
+	\item レイヤーの活性化を切り替える
+		toggleLayer: (name: string) => void;
+	\item グループの設定をする
+		setGroupConfig: (name: string, config: GroupConfig) => void;
+	\item レイヤーにグループを設定する
+		setLayerGroup: (name: string | string[], group: string) => void;
+	\item レイヤーの活性化条件を設定する
+		% setLayerCondition: (name: string, condition: (layers: Layers) => boolean) => void;
+		addDependency: (name: string, dependencies: DependencyGroup) => void;		
+\end{itemize}
+
+\subsection{アクティブなレイヤーを取得する}
+ReactCOPでアクティブなレイヤーを取得するためには、レイヤーの活性化情報を取得し、活性化しているレイヤーを取得する必要がある。
+これは、レイヤーの管理が煩雑になる原因となっている。
+この問題を解決するために、アクティブなレイヤーを取得する機能を提供することで、レイヤーの管理が簡単になる。
+
+% TODO: コードでの比較をする
+
+\subsection{レイヤーのパラメーターを取得する}
+\subsubsection{複数のレイヤーのパラメーターを取得する}
+ReactCOPでは、複数のレイヤーのパラメーターを取得するためには、レイヤーのパラメーターを取得するためには、レイヤー名を指定してレイヤーのパラメーターを取得する必要がある。
+少し不便であるため、複数のレイヤーのパラメーターを取得する機能を提供することで、レイヤーの管理が簡単になる。
+
+\subsubsection{全てのレイヤーのパラメーターを取得する}
+ReactCOPでは、全てのレイヤーのパラメーターを取得するためには、レイヤーのパラメーターを取得するためには、レイヤー名を指定してレイヤーのパラメーターを取得する必要がある。
+少し不便であるため、全てのレイヤーのパラメーターを取得する機能を提供することで、レイヤーの管理が簡単になる。
+
+\subsubsection{アクティブなレイヤーのパラメーターを取得する}
+ReactCOPでアクティブなレイヤーのパラメーターを取得するためには、レイヤーが活性化しているかどうかの判定を行い、活性化しているレイヤーのパラメーターを取得する必要がある。
+これは、少し不便であるため、アクティブなレイヤーのパラメーターを取得する機能を提供することで、レイヤーの管理が簡単になる。
+
+\subsubsection{グループを指定してレイヤーのパラメーターを取得する}
+RectCOPでは、そもそもグループの概念がないため、グループを指定してレイヤーのパラメーターを取得する機能は提供していない。
+しかし、グループを指定してレイヤーのパラメーターを取得する機能を提供することで、レイヤーの管理が簡単になる。
+
+\subsection{レイヤーを追加する}
+ReactCOPでは、明確にレイヤーを追加する機能を提供していない。
+レイヤーを活性化させるときやレイヤーのパラメーターを設定するときに、もしレイヤーが存在しない場合はレイヤーを追加するという処理を行っている。
+これは、いつレイヤーが追加されるかわからないため、レイヤーの管理が煩雑になる。
+
+ReactCOP2では、明確にレイヤーを追加する機能を提供することで、レイヤーの管理が簡単になる。
+
+\subsection{レイヤーを削除する}
+必要がないレイヤーを削除することで、レイヤーの管理が簡単になる。
+
+\subsection{レイヤーの活性化を切り替える}
+ReactCOPでは、レイヤーの活性化を切り替える機能を提供していない。
+レイヤーの活性化を切り替えるには、レイヤーの活性化情報を取得し、活性化しているかどうかの判定を行い、活性化している場合は、レイヤーを非活性化し、非活性化している場合は、レイヤーを活性化する必要がある。
+これは、少し手間であるため、レイヤーの活性化を切り替える機能を提供することで、レイヤーの管理が簡単になる。
+
+\subsection{グループの設定をする}
+ReactCOPでは、そもそもグループの概念がないため、グループの設定をする機能は提供していない。
+グループとは、レイヤーをグループ化することである。
+グループを設定することで、グループ内のレイヤー内で活性化するレイヤーを取得するなどの機能を提供することができる。
+
+ReactCOP2では、グループの設定をする機能を提供することで、レイヤーの管理が簡単になる。
+
+\subsection{レイヤーにグループを設定する}
+レイヤーがどのグループに属するか設定することができる。
+
+\subsection{レイヤーの活性化条件を設定する}
+レイヤーの活性化条件を設定することができる。
+レイヤーの活性化条件とは、レイヤーが活性化する条件である。
+例えば、レイヤーAとレイヤーBがあるとき、レイヤーAが活性化しているときに、レイヤーBを活性化するという条件を設定することができる。
+条件の指定方法は、レイヤーの活性化状態の論理積、論理和を指定できることである。
+
+\subsubsection{Typescriptでの実装}
+ReactCOPでは、Typescriptでの実装をしていない。
+Typescriptでの実装をすることで、コードの可読性と保守性が向上する。
 
 \subsubsection{テストの追加}
-
+ReactCOPでは、テストをしていない。
+テストは、コードの品質を保つために必要である。
 
 \subsection{評価方法}
 - 実装前と後で、できることの違いを比較する。
