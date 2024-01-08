@@ -27,6 +27,18 @@ dependenciesはレイヤーが活性化する条件である。
 
 \subsection{代替する機能}
 \subsubsection{レイヤーパラムの設定・取得}
+
+\subsubsection{レイヤーパラムの設定}
+レイヤーパラムの設定はsetLayerParamsというメソッドを提供している。
+型は以下のように定義する。
+\begin{lstlisting}[caption=setLayerParamsの型]
+setLayerParams: (name: string, params: Record<string, any>) => void;
+\end{lstlisting}
+レイヤー名とレイヤーパラムを指定することで、レイヤーパラムの値を設定できる。
+レイヤーパラムはレイヤーのparamsに格納される。
+ReactCOPではレイヤーが存在しない場合は、新しくレイヤーを定義でき、意図しないレイヤーが混入する可能性があった。
+ReactCOP2では、レイヤーが存在しない場合は、エラーを返すようにした。
+
 \subsubsection{ひとつのレイヤーのレイヤーパラムを取得}
 ReactCOPでは、レイヤーパラムの設定・取得ができるgetLayerParamというメソッドを提供している。
 型は以下のように定義する。
@@ -44,12 +56,120 @@ getLayerParam('hoge')
 \subsubsection{複数のレイヤーのレイヤーパラムを取得}
 複数のレイヤーパラムを取得したい場合はgetLayersParamというメソッドを提供している。
 % TODO ここに型を書く つぎはここから書く
+型は以下のように定義する。
+\begin{lstlisting}[caption=getLayersParamの型]
+getLayersParam: (names: string[]) => any[];
+\end{lstlisting}
+レイヤー名を配列で指定することで、レイヤーパラムの値を配列で取得できる。
+レイヤーパラムは何を設定しても良いため、any型である。
 
 このメソッドは、以下のように使用する。
 \begin{lstlisting}[]
 getLayersParam(['hoge','fuga'])
 \end{lstlisting}
 
+\subsubsection{レイヤーの活性化・非活性化}
+レイヤーの活性化・非活性化は、activateLayerとinactivateLayerというメソッドを提供している。
+型は以下のように定義する。
+\begin{lstlisting}[caption=activateLayerとinactivateLayerの型]
+activeLayer: (name: string) => void; 
+inactiveLayer: (name: string) => void;
+\end{lstlisting}
+レイヤー名を指定することで、レイヤーの活性化・非活性化ができる。
+具体的にはレイヤーのisActiveを活性化状態ならtrue、非活性化状態ならfalseにする。
+ReactCOPではレイヤーが存在しない場合は、新しくレイヤーを定義でき、意図しないレイヤーが混入する可能性があった。
+ReactCOP2では、レイヤーが存在しない場合は、エラーを返すようにした。
+
+\subsubsection{レイヤーの活性化情報の取得}
+レイヤーの活性化情報を取得したい場合はgetLayerというメソッドを提供している。
+型は以下のように定義する。
+\begin{lstlisting}[caption=getLayerの型]
+getLayer: (name: string) => Layer;
+\end{lstlisting}
+レイヤー名を指定することで、レイヤー情報を取得できる。活性化状態はレイヤーの中にisActiveとして格納されている。
+
+\subsubsection{アクティブなレイヤーの取得}
+アクティブなレイヤーを取得したい場合はgetActiveLayersというメソッドを提供している。
+型は以下のように定義する。
+\begin{lstlisting}[caption=getActiveLayersの型]
+getActiveLayers: () => Layers;
+\end{lstlisting}
+
+\subsubsection{複数のレイヤーのパラメーターを取得する}
+複数のレイヤーのパラメーターを取得したい場合はgetLayersParamというメソッドを提供している。
+型は以下のように定義する。
+\begin{lstlisting}[caption=getLayersParamの型]
+getLayersParam: (names: string[]) => any[];
+\end{lstlisting}
+レイヤー名を配列で指定することで、レイヤーパラムの値を配列で取得できる。
+
+\subsubsection{全てのレイヤーのパラメーターを取得する}
+全てのレイヤーのパラメーターを取得したい場合はgetAllLayersParamというメソッドを提供している。
+型は以下のように定義する。
+\begin{lstlisting}[caption=getAllLayersParamの型]
+getAllLayersParams: () => any;
+\end{lstlisting}
+
+\subsubsection{アクティブなレイヤーのパラメーターを取得する}
+アクティブなレイヤーのパラメーターを取得したい場合はgetActiveLayersParamというメソッドを提供している。
+型は以下のように定義する。
+\begin{lstlisting}[caption=getActiveLayersParamの型]
+getActiveLayersParams: () => any;
+\end{lstlisting}
+
+\subsubsection{グループを指定してレイヤーのパラメーターを取得する}
+グループを指定してレイヤーのパラメーターを取得したい場合はgetLayerParamsByGroupというメソッドを提供している。
+型は以下のように定義する。
+\begin{lstlisting}[caption=getLayerParamsByGroupの型]
+getLayerParamsByGroup: (group: string) => any;
+\end{lstlisting}
+
+\subsection{レイヤーを追加する}
+レイヤーを追加するには、addLayerというメソッドを提供している。
+型は以下のように定義する。
+\begin{lstlisting}[caption=addLayerの型]
+addLayer: (layers: Layer[]) => void;
+\end{lstlisting}
+レイヤーを配列で指定することで、レイヤーを追加できる。
+
+\subsection{レイヤーを削除する}
+レイヤーを削除するには、removeLayerというメソッドを提供している。
+型は以下のように定義する。
+\begin{lstlisting}[caption=removeLayerの型]
+removeLayer: (name: string) => void;
+\end{lstlisting}
+レイヤー名を指定することで、レイヤーを削除できる。
+
+\subsection{レイヤーの活性化を切り替える}
+レイヤーの活性化を切り替えるには、toggleLayerというメソッドを提供している。
+型は以下のように定義する。
+\begin{lstlisting}[caption=toggleLayerの型]
+toggleLayer: (name: string) => void;
+\end{lstlisting}
+
+\subsection{グループの設定をする}
+グループの設定をするには、setGroupConfigというメソッドを提供している。
+型は以下のように定義する。
+\begin{lstlisting}[caption=setGroupConfigの型]
+setGroupConfig: (name: string, config: GroupConfig) => void;
+\end{lstlisting}
+グループ名とグループの設定を指定することで、グループの設定をすることができる。
+
+\subsection{レイヤーにグループを設定する}
+レイヤーにグループを設定するには、setLayerGroupというメソッドを提供している。
+型は以下のように定義する。
+\begin{lstlisting}[caption=setLayerGroupの型]
+setLayerGroup: (name: string | string[], group: string) => void;
+\end{lstlisting}
+レイヤー名とグループ名を指定することで、レイヤーにグループを設定することができる。
+
+\subsection{レイヤーの活性化条件を設定する}
+レイヤーの活性化条件を設定するには、addDependencyというメソッドを提供している。
+型は以下のように定義する。
+\begin{lstlisting}[caption=addDependencyの型]
+addDependency: (name: string, dependencies: DependencyGroup) => void;
+\end{lstlisting}
+レイヤー名と活性化条件を指定することで、レイヤーの活性化条件を設定することができる。
 
 \expandafter\ifx\csname ifdraft\endcsname\relax
 \end{document}
